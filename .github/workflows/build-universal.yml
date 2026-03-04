@@ -57,7 +57,7 @@ jobs:
           images: |
             ${{ env.DOCKERHUB_IMAGE }}
           tags: |
-            type=ref,event=branch
+            type=sha,enable=true,priority=100,prefix=,suffix=,format=long
       - name: Build Universal Docker Images
         run:
           for tag in $(echo "${{ steps.meta.outputs.tags }}" | tr ',' '\n');
