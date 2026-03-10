@@ -51,7 +51,6 @@ RUN case "${TARGETARCH}" in \
        ${NODEJS_MIRROR}/${NODEJS_VERSION}/node-${NODEJS_VERSION}-${NODEJS_ARCH}.tar.xz \
     && export NODE_TAR_XZ="/opt/node-${NODEJS_VERSION}-${NODEJS_ARCH}.tar.xz" \
     && export NODE_DIR="/opt/node-${NODEJS_VERSION}-${NODEJS_ARCH}" \
-    && npm install -g npm@latest \
     && /env \
     && rm -f /env
 
